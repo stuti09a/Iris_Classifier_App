@@ -3,38 +3,52 @@ An interactive Iris Flower Prediction app built with Python and Streamlit that l
 
 Live App : https://irisclassifierapps.streamlit.app/
 
-**Files created:**
 
+## 🚀 Features
+- **Real-time Predictions:** Input custom measurements to get instant species classification.
+- **Visual Insights:** Embedded data visualisations showing where user inputs fall within the overall Iris dataset cluster.
+- **Interactive UI:** Clean, responsive, and minimalist sidebar controls built for non-technical users.
 
-training_model.py : Training the RandomForest model and save iris_model.joblib
+## 🛠️ Tech Stack
+- **Frontend/Deployment:** [Streamlit](https://streamlit.io)
+- **Machine Learning:** [Scikit-Learn](https://scikit-learn.org) (Model training, evaluation, and serialization via `.joblib`)
+- **Data Manipulation & Visualisation:** Pandas, Seaborn, Matplotlib
+- **Version Control:** Git & GitHub
 
-iris_model.joblib : Trained model and metadata (features, target_names)
+## 📂 Project Structure
+```text
+├── Iris_app.py          # Main Streamlit web application script
+├── training_model.py     # Script used to train and export the ML model
+├── data_exploration.py  # Exploratory Data Analysis (EDA) scratchpad
+├── iris_model.joblib    # Pre-trained serialization of the classifier model
+├── requirements.txt     # Complete environment dependencies
+└── README.md            # Project documentation
+```
 
-Iris_app.py : Streamlit app for prediction and exploration
+## 📊 How It Works
+1. The user adjusts sliders for **Sepal Length, Sepal Width, Petal Length, and Petal Width**.
+2. The values are fed instantly into the pre-trained Machine Learning classifier (`iris_model.joblib`).
+3. The app displays the predicted flower species (*Iris-setosa*, *Iris-versicolor*, or *Iris-virginica*) along with an illustrative image or distribution plot.
 
-data_exploration.py : To compute descriptive stats and save histograms
+---
 
-requirements.txt : Python packages required
+## 🛠️ Local Setup and Installation
 
-README.md : This file
+To run this project locally on your machine, follow these steps:
 
-**How to run:**
+1. **Clone the repository:**
+   ```bash
+   git clone https://github.com
+   cd Iris-Classifier-App
+   ```
 
+2. **Install dependencies:**
+   ```bash
+   pip install -r requirements.txt
+   ```
 
-First we need to create and activate a virtual environment (using latest python version as 3.11.9)
+3. **Run the Streamlit application:**
+   ```bash
+   streamlit run Iris_app.py
+   ```
 
-Install required modules: pip install -r requirements.txt
-
-To retrain the model: python training_model.py
-
-This will create or update the 'iris_model.joblib' in the current folder.
-
-To run the Streamlit app: streamlit run Iris_app.py
-
-Open the displayed local URL in browser (usually http://localhost:8501)
-
-**Notes**
-
-The app contains two modes: Prediction and Data Exploration ( using histograms and scatter plots).
-
-The trained model file 'iris_model.joblib' is included.
