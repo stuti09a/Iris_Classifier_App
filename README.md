@@ -3,7 +3,7 @@ An interactive Iris Flower Prediction app built with Python and Streamlit that l
 
 Live App : https://irisclassifierapps.streamlit.app/
 
-Files created
+**Files created:**
 
 
 training_model.py : Training the RandomForest model and save iris_model.joblib
@@ -18,7 +18,7 @@ requirements.txt : Python packages required
 
 README.md : This file
 
-How to run
+**How to run:**
 
 
 First we need to create and activate a virtual environment (using latest python version as 3.11.9)
@@ -33,7 +33,7 @@ To run the Streamlit app: streamlit run Iris_app.py
 
 Open the displayed local URL in browser (usually http://localhost:8501)
 
-Notes
+**Notes**
 
 The app contains two modes: Prediction and Data Exploration ( using histograms and scatter plots).
 
